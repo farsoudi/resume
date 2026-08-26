@@ -1,0 +1,16 @@
+# LaTeX build artifacts (tectonic / latexmk / pdflatex)
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.pdf
