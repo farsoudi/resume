@@ -1,0 +1,6 @@
+Projects:
+- FPGA Street Fighter
+- MyHealth
+- ScTennis
+- farsoudi.com ?
+- Arch Linux / Dotfiles
