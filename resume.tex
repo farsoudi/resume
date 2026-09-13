@@ -142,11 +142,11 @@
       {Full-Stack Web Engineer}{Jul. 2023 -- Present}
       {Brake Performance}{Los Angeles, CA}
       \resumeItemListStart
-        \resumeItem{Implemented Apple Pay end-to-end on an e-commerce platform: mutual-TLS merchant validation against Apple's API, frontend payment session handling, and backend charge processing through Authorize.net.}
-	\resumeItem{Built a heuristic fraud-detection engine that cross-references new orders (MySQL) against previously flagged orders across 7 indexed signals (name, email, phone, address, IP), including fuzzy geocoded address matching, auto-flagging suspicious orders and alerting staff.}
-        \resumeItem{Designed a full-stack sales reporting system in Symfony/API Platform, giving management dynamic day/month/year revenue breakdowns by order, part, and product across the entire catalog.}
-        \resumeItem{Built a PHP Symfony and MySQL pipeline that automatically ingests Worldship and Endicia shipment data on a schedule, updating order status and alerting staff to shipments that fail to match an order.}
-        \resumeItem{Built a full CRUD content-management component (site banners) in Symfony/API Platform with image upload handling, exposed through the React admin panel and rendered live on the Next.js storefront.}
+        \resumeItem{Implemented Apple Pay end-to-end on an e-commerce platform with frontend payment session handling on Next.js, and backend charge processing with PHP Symfony. Accounts for 20\% of overall sales.}
+        % temporary
+	\resumeItem{Built a fraud-detection engine that matches new orders against flagged orders.}
+	\resumeItem{Built a cron for AWS Linux that ingests shipment data from UPS \& USPS and updates order status.}
+        \resumeItem{Designed a full-stack sales report system with API Platform and React Admin, giving management dynamic day/month/year revenue breakdowns by order, part, and product across the entire catalog.}
         \resumeItem{Designed a reusable transactional email system for wholesale approvals, shipment errors, and fraud alerts, with fail-safe logging so a failed email never blocks an order.}
     \resumeItemListEnd
 
