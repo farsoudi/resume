@@ -194,12 +194,15 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Self-Hosted AI Stack} $|$ \emph{Ollama, LLM Inference, Docker, FastAPI, PostgreSQL, RAG, n8n}}{August 2026}
+          {\textbf{Self-Hosted AI Agent} $|$ \emph{Ollama, LLM Inference, Docker, FastAPI, PostgreSQL, RAG, n8n}}{August 2026}
           \resumeItemListStart
-            \resumeItem{Architected a fully private AI assistant stack on a headless RTX 3090 server, accessed over Tailscale --- local LLM inference (Qwen, Mixtral up to 47B parameters), a browser chat UI with RAG, and workflow automation --- with zero public internet exposure}
-            \resumeItem{Configured a LibreChat (Docker) chat UI wired to a 14-model Ollama endpoint, with MCP tooling and MongoDB, Meilisearch, and pgvector backends for conversations, search, and RAG}
-            \resumeItem{Designed a cross-device persistent memory service in FastAPI + SQLite (FTS5 + 768-dim embeddings, reciprocal-rank-fusion hybrid search), exposed to every client machine as agent skills for automatic preference capture and per-project document retrieval}
-            \resumeItem{Built an n8n + Postgres automation layer: an LLM email agent classifying Gmail, extracting deadlines, and writing approved items to Google Calendar/Tasks}
+            \resumeItem{Architected a fully private AI assistant stack on a headless RTX 3090 server, accessed over Tailscale with zero public internet exposure}
+            \resumeItem{Ran local LLM inference with Ollama, serving Qwen and Mixtral models up to 47B parameters on 24GB VRAM}
+            \resumeItem{Configured a LibreChat (Docker) chat UI wired to a 14-model Ollama endpoint, with MCP tooling}
+            \resumeItem{Stood up MongoDB, Meilisearch, and pgvector backends for conversations, search, and RAG}
+            \resumeItem{Designed a cross-device persistent memory service in FastAPI + SQLite, using FTS5 plus 768-dim embeddings and reciprocal-rank-fusion hybrid search}
+            \resumeItem{Exposed the memory service to every client machine as agent skills for automatic preference capture and per-project document retrieval}
+            \resumeItem{Built an n8n + Postgres automation layer: an LLM email agent classifying Gmail and extracting deadlines, writing approved items to Google Calendar/Tasks}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
