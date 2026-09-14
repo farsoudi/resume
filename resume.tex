@@ -145,7 +145,7 @@
       \resumeItemListStart
         \resumeItem{Implemented Apple Pay end-to-end on an e-commerce platform with frontend payment session handling on Next.js, and backend charge processing with PHP Symfony. Accounts for 20\% of overall sales.}
         % temporary
-	\resumeItem{Built a fraud-detection engine that matches new orders against flagged orders.}
+	\resumeItem{Built a fraud-detection engine using MySQL that indexes new orders against flagged orders.}
 	\resumeItem{Built a cron for AWS Linux that ingests shipment data from UPS \& USPS and updates order status.}
         \resumeItem{Designed a full-stack sales report system with API Platform and React Admin, giving management dynamic day/month/year revenue breakdowns by order, part, and product across the entire catalog.}
         \resumeItem{Designed a reusable transactional email system for wholesale approvals, shipment errors, and fraud alerts, with fail-safe logging so a failed email never blocks an order.}
@@ -195,28 +195,30 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Self-Hosted AI Agent} $|$ \emph{Ollama, Fedora Linux, Docker, FastAPI, PostgreSQL, RAG, n8n}}{August 2026}
+          {\textbf{Self-Hosted AI Agent} $|$ \emph{Ollama, Fedora Linux, Docker, PostgreSQL, RAG, n8n}}{August 2026}
           \resumeItemListStart
             \resumeItem{Architected a fully private AI assistant stack on a headless RTX 3090 Fedora server, accessed over Tailscale}
             \resumeItem{Ran local LLM inference with Ollama, serving Qwen 3.8 27B}
             \resumeItem{Configured a LibreChat (Docker) chat UI wired to Ollama endpoint, with custom MCP tooling}
-            \resumeItem{Stood up MongoDB, Meilisearch, and pgvector backends for conversations, search, and RAG}
+            \resumeItem{Integrated MongoDB, Meilisearch, and pgvector backends for conversations, search, and RAG}
             \resumeItem{Designed a cross-device persistent memory service in FastAPI + SQLite, using FTS5 plus 768-dim embeddings and reciprocal-rank-fusion hybrid search}
             % \resumeItem{Exposed the memory service to every client machine as agent skills for automatic preference capture and per-project document retrieval}
             \resumeItem{Built an n8n + Postgres automation layer: an LLM email agent classifying Gmail and extracting deadlines, writing approved items to Google Calendar/Tasks}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{FPGA Street Fighter} $|$ \emph{Verilog, Python, Xilinx Vivado}}{April 2025}
+          {\textbf{Paid LLM Inference Gateway} $|$ \emph{Go, x402, PostgreSQL, Ollama}}{September 2026}
+          \resumeItemListStart
+            \resumeItem{Built a Go gateway that fronts a self-hosted Ollama instance with metered, pay-as-you-go inference}
+            \resumeItem{Funded prepaid USDC balances via the x402 HTTP 402 payment protocol, integrating Coinbase's facilitator on Base to verify and settle on-chain payments}
+            \resumeItem{Designed an off-chain Postgres ledger to credit balances and record auditable usage transactions}
+            % \resumeItem{Implemented invite-only API keys with SHA-256 hashing, per-key rate/concurrency guardrails, and an admin CLI}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{FPGA Street Fighter} $|$ \emph{Verilog, Xilinx Vivado}}{April 2025}
           \resumeItemListStart
             \resumeItem{Synthesized a 2-player fighting game on Nexys A7 FPGA hardware with custom hard-wired breadboard controllers}
             \resumeItem{Designed the core game engine in Verilog: collision detection, combat resolution, and win-condition logic}
             \resumeItem{Built the player state machine and a reusable timer module driving movement, jump arcs, and shield mechanics}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-          \resumeItemListStart
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -227,11 +229,12 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-      \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
+		    \textbf{Languages}{: Go, C/C++, JavaScript, SQL (MySQL \& Postgres), PHP, Verilog, CUDA} \\
+      \textbf{Frameworks}{: React / React Native, Node.js, Symfony, API Platform, ESP32 / ESP-IDF} \\
       % \textbf{AI / LLM}{: LLM Inference (Ollama), RAG (pgvector), AI Agents, OpenCode, LibreChat, n8n} \\
-      \textbf{Developer Tools}{: Git, Docker, Tailscale, TravisCI, Google Cloud Platform, Linux, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     % \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+      \textbf{Developer Tools}{: Git, Docker, Tailscale, MongoDB, n8n, Neovim} \\
+		 \textbf{Linux Distros}{: Arch (Personal Distro), Amazon Linux, CentOS, Fedora, Ubuntu, Raspbian} \\
+     % \textbf{Libraries}{: }
     }}
  \end{itemize}
 
