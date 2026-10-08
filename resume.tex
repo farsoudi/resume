@@ -25,6 +25,11 @@
   \input{glyphtounicode}
 \fi
 
+\providecommand{\phone}{}
+\providecommand{\edusuffix}{}
+\IfFileExists{private.tex}{\input{private.tex}}{}
+\IfFileExists{private-g.tex}{\input{private-g.tex}}{}
+
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -94,6 +99,7 @@
 
 \begin{center}
     \textbf{\Huge \scshape Kasra Farsoudi} \\ \vspace{1pt}
+    \small \phone
     \href{mailto:farsoudi@gmail.com}{\underline{farsoudi@gmail.com}} $|$
     \href{https://linkedin.com/in/farsoudi}{\underline{www.linkedin.com/in/farsoudi}} $|$
     \href{https://github.com/farsoudi}{\underline{www.github.com/farsoudi}} $|$
@@ -105,7 +111,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Southern California}{Los Angeles, CA}
-      {B.S. in Computer Engineering \& Computer Science}{Aug. 2024 -- Dec. 2026}
+      {B.S. in Computer Engineering \& Computer Science}{Aug. 2024 -- Dec. 2026\edusuffix}
       \resumeItem{\textit{\textbf{Relevant Coursework}: Professional C++, Machine Learning, MOS VLSI Circuit Design, Parallel Design, Data Structures, Embedded Systems, Digital Circuits, Distributed IoT Systems, Algorithms \& Theory of Computing, Software Development, Operating Systems, Computer Architecture, Networking}}
   \resumeSubHeadingListEnd
 
