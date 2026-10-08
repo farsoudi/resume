@@ -14,6 +14,8 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage{soul}
+\setul{2pt}{0.4pt}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
@@ -24,25 +26,12 @@
 \fi
 
 
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -55,18 +44,14 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \ifPDFTeX
   \pdfgentounicode=1
 \fi
 
-%-------------------------
-% Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -105,21 +90,10 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
-
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
 
 \begin{center}
     \textbf{\Huge \scshape Kasra Farsoudi} \\ \vspace{1pt}
-    \small 
     \href{mailto:farsoudi@gmail.com}{\underline{farsoudi@gmail.com}} $|$
     \href{https://linkedin.com/in/farsoudi}{\underline{www.linkedin.com/in/farsoudi}} $|$
     \href{https://github.com/farsoudi}{\underline{www.github.com/farsoudi}} $|$
@@ -127,7 +101,6 @@
 \end{center}
 
 
-%-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
@@ -137,17 +110,15 @@
   \resumeSubHeadingListEnd
 
 
-%-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Full-Stack Software Engineer}{Jul. 2023 -- Present}
       {Brake Performance}{Los Angeles, CA}
       \resumeItemListStart
-        \resumeItem{Implemented Apple Pay end-to-end on an e-commerce platform with frontend payment session handling on Next.js, and backend charge processing with PHP Symfony, increased revenue by 20\%.}
-        % temporary
-	\resumeItem{Devised a fraud-detection engine using MySQL that indexes new orders against flagged orders.}
-	\resumeItem{Automated a cron for AWS Linux that ingests shipment data from UPS \& USPS and updates order status.}
+        \resumeItem{Implemented end-to-end Apple Pay on an e-commerce platform (Next.js payment sessions, PHP Symfony backend), driving a $\sim$20\% increase in online revenue in the quarter after launch.}
+        \resumeItem{Devised a PHP+MySQL fraud-detection engine, cutting fraudulent orders $\sim$37\% in the months after deployment.}
+        \resumeItem{Automated a cron for AWS Linux that ingests shipment data from UPS \& USPS and updates order status.}
         \resumeItem{Engineered a full-stack sales report system with an SQL data ingestion pipeline and React Admin, providing day/month/year revenue breakdowns by order, part, and product.}
         \resumeItem{Established a reusable transactional email system for wholesale approvals, shipment errors, and fraud alerts}
     \resumeItemListEnd
@@ -159,84 +130,59 @@
         \resumeItem{Led the frontend team through agile sprint planning, mentoring new interns and delegating work across the group.}
         \resumeItem{Developed the front-end logic for handling 25+ Rest API endpoints in TypeScript on React Native.}
         \resumeItem{Built the Redux state management system, including user data storage and synchronization to React lifecycle.}
-	\resumeItem{Streamlined Redux-Saga middleware for RESTful API calls \& pipelining asynchronous data to client-side storage.}
+        \resumeItem{Streamlined Redux-Saga middleware for RESTful API calls \& pipelining asynchronous data to client-side storage.}
         \resumeItem{Spearheaded the entire login and authorization workflow, from design to implementation.}
         \resumeItem{Integrated secure token-based authentication with refresh logic in JavaScript.}
       \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
-
-    % \resumeSubheading
-    %   {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-    %   {Southwestern University}{Georgetown, TX}
-    %   \resumeItemListStart
-    %     \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-    %     \resumeItem{Developed a game in Java to test the generated dungeons}
-    %     \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-    %     \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-    %     \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-    %     \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
-    %   \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 
-%-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Self-Hosted AI Agent} $|$ \emph{Ollama, Fedora Linux, Docker, PostgreSQL, RAG, n8n}}{August 2026}
-          \resumeItemListStart
-            \resumeItem{Architected a fully private AI assistant stack on a headless RTX 3090 Fedora server, accessed over Tailscale}
-            \resumeItem{Deployed local LLM inference with Ollama, serving Qwen 3.8 27B}
-            \resumeItem{Configured a LibreChat (Docker) chat UI wired to Ollama endpoint, with custom MCP tooling}
-            \resumeItem{Unified MongoDB, Meilisearch, and pgvector backends for conversations, search, and RAG}
-            \resumeItem{Designed a cross-device persistent memory service in FastAPI + SQLite}
-            % \resumeItem{Exposed the memory service to every client machine as agent skills for automatic preference capture and per-project document retrieval}
-            \resumeItem{Orchestrated an n8n + Postgres automation layer: an LLM email agent classifying Gmail and extracting deadlines, writing approved items to Google Calendar/Tasks}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Paid LLM Inference Gateway} $|$ \emph{Go, x402, PostgreSQL, Ollama}}{September 2026}
-          \resumeItemListStart
-            \resumeItem{Shipped a Go gateway that fronts a self-hosted Ollama instance with metered, pay-as-you-go inference}
-            \resumeItem{Funded prepaid USDC balances via the x402 HTTP 402 payment protocol, integrating Coinbase's facilitator on Base to verify and settle on-chain payments}
-            \resumeItem{Modeled an off-chain Postgres ledger to credit balances and record auditable usage transactions}
-            % \resumeItem{Implemented invite-only API keys with SHA-256 hashing, per-key rate/concurrency guardrails, and an admin CLI}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{FPGA Street Fighter} $|$ \emph{Verilog, Xilinx Vivado}}{April 2025}
+          {\href{https://farsoudi.com/portfolio/fpga-street-fighter}{\textbf{FPGA Street Fighter}} $|$ \emph{Verilog, Xilinx Vivado}}{April 2025}
           \resumeItemListStart
             \resumeItem{Synthesized a 2-player fighting game on Nexys A7 FPGA hardware with custom hard-wired breadboard controllers}
             \resumeItem{Programmed the core game engine in Verilog: collision detection, combat resolution, and win-condition logic}
             \resumeItem{Built the player state machine and a reusable timer module driving movement, jump arcs, and shield mechanics}
           \resumeItemListEnd
+      \resumeProjectHeading
+          {\href{https://farsoudi.com/portfolio/paid-llm-gateway}{\textbf{Paid LLM Inference Gateway}} $|$ \emph{Go, x402, PostgreSQL, Ollama}}{September 2026}
+          \resumeItemListStart
+            \resumeItem{Shipped a Go gateway that fronts a self-hosted Ollama instance with metered, pay-as-you-go inference}
+            \resumeItem{Funded prepaid USDC balances via the x402 HTTP 402 payment protocol, integrating Coinbase's facilitator on Base to verify and settle on-chain payments}
+            \resumeItem{Modeled an off-chain Postgres ledger to credit balances and record auditable usage transactions}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\href{https://farsoudi.com/portfolio/self-hosted-ai-stack}{\textbf{Self-Hosted AI Agent}} $|$ \emph{Ollama, Fedora Linux, Docker, PostgreSQL, RAG, n8n}}{August 2026}
+          \resumeItemListStart
+            \resumeItem{Architected a fully private AI assistant stack on a headless RTX 3090 Fedora server, accessed over Tailscale}
+            \resumeItem{Deployed local LLM inference with Ollama, serving Qwen 3.8 27B connected to OpenCode}
+            \resumeItem{Configured a LibreChat (Docker) chat UI wired to Ollama endpoint, with custom MCP tooling}
+            \resumeItem{Designed a cross-device persistent memory service in FastAPI + SQLite}
+            \resumeItem{Orchestrated an n8n + Postgres automation layer connected to gmail to extract \& remember important emails }
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {{\textbf{USC Course API Reverse Engineering}} $|$ \emph{C++20, SQLite}}{November 2024}
+          \resumeItemListStart
+            \resumeItem{Reverse-engineered USC's schedule-of-classes API, mapping its term, department, course, and section endpoints}
+            \resumeItem{Built a from-scratch C++ ORM over the SQLite C API with template-typed columns and a foreign-key schema}
+            \resumeItem{Designed an operator-overloaded \texttt{WHERE} query DSL for composable selects}
+          \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 
 
-%
-%-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+ \begin{itemize}[]
     \small{\item{
-		    \textbf{Languages}{: Go, C/C++, JavaScript, SQL (MySQL \& Postgres), PHP, Verilog, CUDA, Python} \\
+        \textbf{Languages}{: \ul{C/C++}, Go, JavaScript, TypeScript, SQL (MySQL \& Postgres), PHP, Verilog, CUDA, Python} \\
       \textbf{Frameworks}{: React / React Native, Node.js, Symfony, API Platform, ESP32 / ESP-IDF, MongoDB} \\
-      % \textbf{AI / LLM}{: LLM Inference (Ollama), RAG (pgvector), AI Agents, OpenCode, LibreChat, n8n} \\
-      \textbf{Developer Tools}{: Git, Docker, Tailscale, n8n, Neovim, Ollama, AWS} \\
-		 \textbf{Linux Distros}{: Arch (Personal Distro), Amazon Linux, CentOS, Fedora, Ubuntu, Raspbian} \\
-     % \textbf{Libraries}{: }
+      \textbf{Developer Tools}{: Git, Docker, Tailscale, n8n, Neovim, Ollama, AWS, OpenCode} \\
+      \textbf{Linux Distros}{: Arch (Personal Distro), Amazon Linux, CentOS, Fedora, Ubuntu, Raspbian} \\
     }}
  \end{itemize}
 
 
-%-------------------------------------------
 \end{document}
