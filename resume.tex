@@ -87,6 +87,8 @@
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
+\newcommand{\resumeLink}[2]{\href{#1}{\textcolor{RoyalBlue}{\ul{#2}}}}
+
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemiii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -100,10 +102,10 @@
 \begin{center}
     \textbf{\Huge \scshape Kasra Farsoudi} \\ \vspace{1pt}
     \small \phone
-    \href{mailto:farsoudi@gmail.com}{\underline{farsoudi@gmail.com}} $|$
-    \href{https://linkedin.com/in/farsoudi}{\underline{www.linkedin.com/in/farsoudi}} $|$
-    \href{https://github.com/farsoudi}{\underline{www.github.com/farsoudi}} $|$
-    \href{https://farsoudi.com}{\underline{\vphantom{g}farsoudi.com}}
+    \resumeLink{mailto:farsoudi@gmail.com}{farsoudi@gmail.com} $|$
+    \resumeLink{https://linkedin.com/in/farsoudi}{www.linkedin.com/in/farsoudi} $|$
+    \resumeLink{https://github.com/farsoudi}{www.github.com/farsoudi} $|$
+    \resumeLink{https://farsoudi.com}{farsoudi.com}
 \end{center}
 
 
@@ -126,15 +128,15 @@
         \resumeItem{Devised a PHP+MySQL fraud-detection engine, cutting fraudulent orders $\sim$37\% in the months after deployment.}
         \resumeItem{Automated a cron for AWS Linux that ingests shipment data from UPS \& USPS and updates order status.}
         \resumeItem{Engineered a full-stack sales report system with an SQL data ingestion pipeline and React Admin, providing day/month/year revenue breakdowns by order, part, and product.}
-        \resumeItem{Established a reusable transactional email system for wholesale approvals, shipment errors, and fraud alerts}
+        \resumeItem{Established a reusable transactional email system for wholesale approvals, shipment errors, and fraud alerts.}
     \resumeItemListEnd
 
     \resumeSubheading
-      {Junior Software Engineer \textit}{October 2022 -- July 2023}
+      {Junior Software Engineer}{October 2022 -- July 2023}
       {I-Safe}{Carlsbad, CA}
       \resumeItemListStart
         \resumeItem{Led the frontend team through agile sprint planning, mentoring new interns and delegating work across the group.}
-        \resumeItem{Developed the front-end logic for handling 25+ Rest API endpoints in TypeScript on React Native.}
+        \resumeItem{Developed the front-end logic for handling 25+ REST API endpoints in TypeScript on React Native.}
         \resumeItem{Built the Redux state management system, including user data storage and synchronization to React lifecycle.}
         \resumeItem{Streamlined Redux-Saga middleware for RESTful API calls \& pipelining asynchronous data to client-side storage.}
         \resumeItem{Spearheaded the entire login and authorization workflow, from design to implementation.}
@@ -147,47 +149,46 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\href{https://farsoudi.com/portfolio/fpga-street-fighter}{\textbf{FPGA Street Fighter}} $|$ \emph{Verilog, Xilinx Vivado}}{April 2025}
+          {\resumeLink{https://github.com/farsoudi/kasradb/tree/main}{\textbf{Custom Database Engine}} $|$ \emph{C++23, Unix}}{October 2026}
           \resumeItemListStart
-            \resumeItem{Synthesized a 2-player fighting game on Nexys A7 FPGA hardware with custom hard-wired breadboard controllers}
-            \resumeItem{Programmed the core game engine in Verilog: collision detection, combat resolution, and win-condition logic}
-            \resumeItem{Built the player state machine and a reusable timer module driving movement, jump arcs, and shield mechanics}
+            \resumeItem{Designed and implemented a persistent, SQLite-style storage engine in C++23.}
+            \resumeItem{Built a page manager, buffer pool, and on-disk B+-tree supporting point lookups, inserts, deletes, and ranges.}
+            \resumeItem{Built slotted 4\,KB pages with free-space accounting for variable-length records, plus a write-ahead log and crash-recovery path validated after mid-write process kills.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\href{https://farsoudi.com/portfolio/paid-llm-gateway}{\textbf{Paid LLM Inference Gateway}} $|$ \emph{Go, x402, PostgreSQL, Ollama}}{September 2026}
+          {\resumeLink{https://farsoudi.com/portfolio/sctennis}{\textbf{SCTennis}} $|$ \emph{Go, sqlc, SQL, Redis, Gin}}{January 2026}
           \resumeItemListStart
-            \resumeItem{Shipped a Go gateway that fronts a self-hosted Ollama instance with metered, pay-as-you-go inference}
-            \resumeItem{Funded prepaid USDC balances via the x402 HTTP 402 payment protocol, integrating Coinbase's facilitator on Base to verify and settle on-chain payments}
-            \resumeItem{Modeled an off-chain Postgres ledger to credit balances and record auditable usage transactions}
+            \resumeItem{Built a Golang backend for the USC tennis club app, with auth and real-time crons for tennis events.}
+            \resumeItem{Structured the API one file per entity, each with its own middleware.}
+            \resumeItem{Generated type-safe database access with sqlc from hand-written SQL.}
+            \resumeItem{HTTP endpoints configured with gin, and fast auth with JWTs stored on redis.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\href{https://farsoudi.com/portfolio/self-hosted-ai-stack}{\textbf{Self-Hosted AI Agent}} $|$ \emph{Ollama, Fedora Linux, Docker, PostgreSQL, RAG, n8n}}{August 2026}
+          {\resumeLink{https://farsoudi.com/portfolio/self-hosted-ai-stack}{\textbf{Self-Hosted AI Agent}} $|$ \emph{Ollama, Fedora Linux, Docker, PostgreSQL, RAG, n8n}}{August 2026}
           \resumeItemListStart
-            \resumeItem{Architected a fully private AI assistant stack on a headless RTX 3090 Fedora server, accessed over Tailscale}
-            \resumeItem{Deployed local LLM inference with Ollama, serving Qwen 3.8 27B connected to OpenCode}
-            \resumeItem{Configured a LibreChat (Docker) chat UI wired to Ollama endpoint, with custom MCP tooling}
-            \resumeItem{Designed a cross-device persistent memory service in FastAPI + SQLite}
-            \resumeItem{Orchestrated an n8n + Postgres automation layer connected to gmail to extract \& remember important emails }
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {{\textbf{USC Course API Reverse Engineering}} $|$ \emph{C++20, SQLite}}{November 2024}
-          \resumeItemListStart
-            \resumeItem{Reverse-engineered USC's schedule-of-classes API, mapping its term, department, course, and section endpoints}
-            \resumeItem{Built a from-scratch C++ ORM over the SQLite C API with template-typed columns and a foreign-key schema}
-            \resumeItem{Designed an operator-overloaded \texttt{WHERE} query DSL for composable selects}
+            \resumeItem{Architected a fully private AI assistant stack on a headless RTX 3090 Fedora server, accessed over Tailscale.}
+            \resumeItem{Deployed local LLM inference with Ollama (Qwen 3.8 27B) wired to OpenCode and a Dockerized LibreChat UI.}
+            \resumeItem{Persistent memory service in FastAPI + SQLite and an n8n + Postgres automation layer connected to gmail.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 
 
 \section{Technical Skills}
- \begin{itemize}[]
+ \begin{itemize}[label={}]
     \small{\item{
         \textbf{Languages}{: \ul{C/C++}, Go, JavaScript, TypeScript, SQL (MySQL \& Postgres), PHP, Verilog, CUDA, Python} \\
       \textbf{Frameworks}{: React / React Native, Node.js, Symfony, API Platform, ESP32 / ESP-IDF, MongoDB} \\
       \textbf{Developer Tools}{: Git, Docker, Tailscale, n8n, Neovim, Ollama, AWS, OpenCode} \\
       \textbf{Linux Distros}{: Arch (Personal Distro), Amazon Linux, CentOS, Fedora, Ubuntu, Raspbian} \\
     }}
+ \end{itemize}
+
+\section{Miscellaneous}
+ \begin{itemize}[label={}]
+    \small{\item{
+	\textbf{Head of Software @ USC GenTennis Club} - Responsible for any software shipped for the genclub tennis team.\\
+		 \resumeLink{https://bigdataforsandiego.github.io/bigdataforsandiego2022.github.io/\#winner}{\textbf{2022 SDSU Big Data Hackathon}} - 3rd place overall, 1st place in geo-computational thinking.} }
  \end{itemize}
 
 
